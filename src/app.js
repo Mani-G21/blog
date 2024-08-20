@@ -61,7 +61,7 @@ function updatePost(evt){
 }
 
 function fetchPosts(evt){
-    http.get('http://localhost:8000/posts')
+    http.get('https://mani-g21.github.io/blog/data/db.json/posts')
     .then(data => ui.showPosts(data))
     .catch(err => console.warn(err));
 }
@@ -91,7 +91,7 @@ function addPost(evt){
         author
     };
 
-    http.post('http://localhost:8000/posts', post)
+    http.post('https://mani-g21.github.io/blog/data/db.json', post)
         .then(data => {
             ui.clearFields();
             ui.showAlert(".posts-container", "#posts", "success", "post added successfully");
